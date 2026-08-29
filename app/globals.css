@@ -1,0 +1,413 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Paleta Lila / XV Años — 5 colores totales */
+  --background: oklch(0.985 0.008 320);          /* crema lila muy claro */
+  --foreground: oklch(0.28 0.06 305);            /* morado profundo (texto) */
+
+  --card: oklch(0.99 0.005 320);
+  --card-foreground: oklch(0.28 0.06 305);
+
+  --popover: oklch(0.99 0.005 320);
+  --popover-foreground: oklch(0.28 0.06 305);
+
+  --primary: oklch(0.68 0.13 310);               /* lila principal */
+  --primary-foreground: oklch(0.99 0.005 320);
+
+  --secondary: oklch(0.93 0.04 315);             /* lila pastel */
+  --secondary-foreground: oklch(0.32 0.08 305);
+
+  --muted: oklch(0.95 0.02 320);
+  --muted-foreground: oklch(0.5 0.05 310);
+
+  --accent: oklch(0.78 0.09 75);                 /* dorado suave (acento) */
+  --accent-foreground: oklch(0.25 0.05 305);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(0.86 0.04 315);
+  --input: oklch(0.9 0.03 315);
+  --ring: oklch(0.68 0.13 310);
+
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.18 0.04 305);
+  --foreground: oklch(0.96 0.02 320);
+  --card: oklch(0.22 0.05 305);
+  --card-foreground: oklch(0.96 0.02 320);
+  --popover: oklch(0.22 0.05 305);
+  --popover-foreground: oklch(0.96 0.02 320);
+  --primary: oklch(0.78 0.13 310);
+  --primary-foreground: oklch(0.18 0.04 305);
+  --secondary: oklch(0.3 0.06 305);
+  --secondary-foreground: oklch(0.96 0.02 320);
+  --muted: oklch(0.28 0.05 305);
+  --muted-foreground: oklch(0.75 0.05 310);
+  --accent: oklch(0.78 0.09 75);
+  --accent-foreground: oklch(0.18 0.04 305);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.32 0.06 305);
+  --input: oklch(0.32 0.06 305);
+  --ring: oklch(0.78 0.13 310);
+}
+
+@theme inline {
+  --font-sans: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-display: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-script: var(--font-great-vibes), 'Great Vibes', cursive;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10%) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.9; }
+  100% {
+    transform: translateY(110vh) translateX(60px) rotate(720deg);
+    opacity: 0;
+  }
+}
+@keyframes butterfly-float {
+  0%, 100% { transform: translateY(0px) translateX(0) rotate(-4deg); }
+  25% { transform: translateY(-14px) translateX(8px) rotate(2deg); }
+  50% { transform: translateY(-6px) translateX(-6px) rotate(-2deg); }
+  75% { transform: translateY(-18px) translateX(4px) rotate(4deg); }
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+}
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+.animate-petal-fall {
+  animation: petal-fall linear infinite;
+}
+.animate-butterfly {
+  animation: butterfly-float 7s ease-in-out infinite;
+}
+.animate-sway {
+  transform-origin: top center;
+  animation: sway 6s ease-in-out infinite;
+}
+
+/* ===================== INTRO: Sobre / Carta ===================== */
+@keyframes envelope-appear {
+  0%   { transform: scale(0.82) translateY(40px); opacity: 0; filter: blur(4px); }
+  60%  { filter: blur(0px); }
+  100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0px); }
+}
+@keyframes envelope-idle {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  30%       { transform: translateY(-10px) rotate(0.5deg) scale(1.01); }
+  70%       { transform: translateY(-5px) rotate(-0.3deg) scale(1.005); }
+}
+@keyframes wax-pulse {
+  0%, 100% {
+    box-shadow:
+      0 8px 24px rgba(0,0,0,0.50),
+      inset 0 -6px 12px rgba(0,0,0,0.35),
+      inset 0 5px 8px rgba(255,255,255,0.40),
+      0 0 0 0 rgba(230, 140, 50, 0.60);
+  }
+  50% {
+    box-shadow:
+      0 8px 24px rgba(0,0,0,0.50),
+      inset 0 -6px 12px rgba(0,0,0,0.35),
+      inset 0 5px 8px rgba(255,255,255,0.40),
+      0 0 0 16px rgba(230, 140, 50, 0);
+  }
+}
+@keyframes wax-break {
+  0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+  20%  { transform: translate(-50%, -50%) scale(1.18) rotate(-8deg); opacity: 1; }
+  55%  { transform: translate(-50%, -50%) scale(0.72) rotate(22deg); opacity: 0.65; }
+  100% { transform: translate(-50%, -50%) scale(0.3) rotate(55deg); opacity: 0; }
+}
+@keyframes flap-open {
+  0%   { transform: rotateX(0deg); }
+  40%  { transform: rotateX(-80deg); }
+  100% { transform: rotateX(-176deg); }
+}
+@keyframes letter-rise {
+  0%   { transform: translateY(0) scale(1); }
+  60%  { transform: translateY(-62%) scale(1.03); }
+  100% { transform: translateY(-58%) scale(1.04); }
+}
+@keyframes letter-expand {
+  0%   { transform: translateY(-58%) scale(1.04); opacity: 1; }
+  100% { transform: translateY(-200%) scale(1.08); opacity: 0; }
+}
+
+.envelope-stage {
+  perspective: 1800px;
+  perspective-origin: 50% 30%;
+  /* NOTE: do NOT set transform-style: preserve-3d here — the button itself
+     doesn't need it; only .envelope and its children do */
+}
+.envelope {
+  position: relative;
+  width: min(84vw, 390px);
+  aspect-ratio: 5 / 3;
+  transform-style: preserve-3d;
+  /*
+   * box-shadow is SAFE with preserve-3d — unlike filter/drop-shadow
+   * which flatten the 3D stacking context and break child rotateX.
+   */
+  box-shadow:
+    0 30px 55px rgba(50, 10, 80, 0.58),
+    0 10px 20px rgba(50, 10, 80, 0.28);
+  animation: envelope-appear 1s cubic-bezier(0.22, 0.9, 0.28, 1) both;
+}
+.envelope-idle {
+  animation:
+    envelope-appear 1s cubic-bezier(0.22, 0.9, 0.28, 1) both,
+    envelope-idle 4.5s ease-in-out 1.4s infinite;
+}
+
+/* ── Envelope back body (darkest layer) ── */
+.envelope-body {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    oklch(0.52 0.15 307) 0%,
+    oklch(0.43 0.14 303) 55%,
+    oklch(0.38 0.13 300) 100%
+  );
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.12),
+    inset 0 0 50px rgba(0,0,0,0.28);
+  z-index: 1;
+}
+
+/* ── Letter card inside envelope ── */
+.envelope-letter {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 8%;
+  bottom: 8%;
+  background:
+    linear-gradient(160deg,
+      oklch(0.998 0.002 325) 0%,
+      oklch(0.975 0.008 322) 50%,
+      oklch(0.960 0.014 318) 100%);
+  border-radius: 5px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(120, 60, 160, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  z-index: 2;
+  transform: translateY(0) scale(1);
+  transform-origin: bottom center;
+  will-change: transform, opacity;
+}
+.envelope.is-open .envelope-letter {
+  animation: letter-rise 1.35s cubic-bezier(0.20, 0.85, 0.28, 1) 0.98s forwards;
+}
+/* When JS marks it as letter-revealed, freeze it at risen position */
+.envelope-letter.letter-revealed {
+  transform: translateY(-58%) scale(1.04);
+}
+
+/* ── Front pocket (V-shaped flap bottom) ── */
+.envelope-pocket {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    175deg,
+    oklch(0.72 0.13 311) 0%,
+    oklch(0.60 0.15 308) 100%
+  );
+  clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
+  border-radius: 0 0 10px 10px;
+  z-index: 4;
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.20);
+}
+.envelope-pocket::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, transparent 49.5%, rgba(0,0,0,0.09) 50%, transparent 50.5%) no-repeat,
+    linear-gradient(225deg, transparent 49.5%, rgba(0,0,0,0.09) 50%, transparent 50.5%) no-repeat;
+  background-size: 50% 52%, 50% 52%;
+  background-position: left top, right top;
+  pointer-events: none;
+}
+
+/* ── Top flap ── */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  z-index: 6;
+  pointer-events: none;
+}
+.envelope.is-open .envelope-flap {
+  animation: flap-open 1.25s cubic-bezier(0.60, 0.05, 0.40, 1) 0.48s forwards;
+}
+
+.envelope-flap-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    175deg,
+    oklch(0.78 0.12 312) 0%,
+    oklch(0.63 0.15 308) 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 50% 96%);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.30));
+  transition: opacity 0ms;
+}
+.envelope-flap-inner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    175deg,
+    oklch(0.94 0.03 318) 0%,
+    oklch(0.87 0.06 314) 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 50% 96%);
+  box-shadow: inset 0 -10px 20px rgba(120,60,160,0.15);
+  transition: opacity 0ms;
+}
+
+/* ── Wax seal ── */
+.wax-seal {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 26%,
+      oklch(0.88 0.14 55) 0%,
+      oklch(0.68 0.20 35) 42%,
+      oklch(0.44 0.20 24) 100%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.50),
+    inset 0 -6px 12px rgba(0,0,0,0.35),
+    inset 0 5px 8px rgba(255,255,255,0.40);
+  z-index: 7;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  animation: wax-pulse 2.6s ease-in-out infinite;
+}
+.wax-seal::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255,255,255,0.55);
+  pointer-events: none;
+}
+.wax-seal::after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: 16%;
+  width: 32%;
+  height: 24%;
+  border-radius: 50%;
+  background: rgba(255,228,185,0.50);
+  filter: blur(2.5px);
+  pointer-events: none;
+}
+.wax-seal-letter {
+  position: relative;
+  font-family: var(--font-script), 'Great Vibes', cursive;
+  font-size: 2.1rem;
+  line-height: 1;
+  color: rgba(255,240,218,0.97);
+  text-shadow:
+    0 1px 0 rgba(0,0,0,0.38),
+    0 0 10px rgba(255,210,160,0.40);
+  z-index: 1;
+}
+.envelope.is-open .wax-seal {
+  animation: wax-break 0.72s cubic-bezier(0.52, 0, 0.52, 1) forwards;
+}
+
+@media (max-width: 480px) {
+  .wax-seal       { width: 56px; height: 56px; }
+  .wax-seal-letter { font-size: 1.75rem; }
+}
+
