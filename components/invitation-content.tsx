@@ -13,7 +13,7 @@ import { IntroGate } from "@/components/intro-gate"
 import type { Guest } from "@/lib/guests"
 import { getGuestStrings } from "@/lib/guests"
 
-const HOST_NAME = "Melany"
+const HOST_NAME = "Agos"
 const EVENT_DATE_ISO = "2026-06-14T20:00:00-05:00" // Domingo 14 Junio 2026, 8:00 PM (Colombia)
 const EVENT_LOCATION = "Discoteca 8cero4, en cuatro esquinas"
 const WHATSAPP_PHONE = "573015181018" // +57 301 518 1018

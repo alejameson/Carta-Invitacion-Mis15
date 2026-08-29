@@ -109,7 +109,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
 
             {/* Name in script */}
             <p className={`font-script leading-none text-white drop-shadow-[0_6px_16px_rgba(40,10,70,0.55)] transition-all duration-700 ${isLetterUp ? "mb-0 text-4xl sm:text-5xl opacity-0 -translate-y-4" : "mb-8 text-5xl sm:text-6xl opacity-100 translate-y-0"}`}>
-              Melany
+              Agos
             </p>
 
             {/* Envelope button */}

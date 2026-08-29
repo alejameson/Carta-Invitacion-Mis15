@@ -169,7 +169,7 @@ function buildPersonalizedMessage(guest: GuestInfo, count?: number): string {
   if (!isPlural) {
     const pronoun = guest.type === "f" ? "la" : "lo"
     return [
-      `¡Hola Melany!`,
+      `¡Hola Agos!`,
       "",
       `Soy *${guest.name}* y con muchísima alegría confirmo mi asistencia a tu fiesta de XV Años.`,
       "",
@@ -190,7 +190,7 @@ function buildPersonalizedMessage(guest: GuestInfo, count?: number): string {
       : `Asistiremos *${guest.slots}* personas.`
 
   return [
-    `¡Hola Melany!`,
+    `¡Hola Agos!`,
     "",
     `Somos ${article} *${guest.name}* y con muchísima alegría confirmamos nuestra asistencia a tu fiesta de XV Años.`,
     countLine,
