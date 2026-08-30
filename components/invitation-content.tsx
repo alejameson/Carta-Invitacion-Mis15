@@ -15,7 +15,7 @@ import { getGuestStrings } from "@/lib/guests"
 
 const HOST_NAME = "Agos"
 const EVENT_DATE_ISO = "2026-09-26T21:30:00-03:00" // Sábado 26 de septiembre de 2026, 9:30 p. m. (Argentina)
-const EVENT_LOCATION = "Lavalle Juan (S) 816"
+const EVENT_LOCATION = "Salón del Colegio Farmacéutico"
 const PARTY_ADDRESS = `${EVENT_LOCATION}, J5402 San Juan, San Juan, Argentina`
 const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(PARTY_ADDRESS)}&output=embed`
 const MAP_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(PARTY_ADDRESS)}`
