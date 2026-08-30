@@ -55,7 +55,7 @@ export function buildGuestWhatsappMsg(guest: Guest, count?: number): string {
     const pronoun = guest.type === "f" ? "la" : "lo"
     return (
       `¡Hola Agos!\n\n` +
-      `Soy *${guest.name}* y con muchísima alegría confirmo mi asistencia a tu fiesta de XV Años.\n\n` +
+      `Soy *${guest.name}* y con muchísima alegría confirmo mi asistencia a tu fiesta de XV años.\n\n` +
       `¡Cuenta conmigo, no me ${pronoun} pierdo por nada del mundo!`
     )
   }
@@ -70,12 +70,12 @@ export function buildGuestWhatsappMsg(guest: Guest, count?: number): string {
 
   const countLine =
     count != null
-      ? `Asistiremos *${count}* de ${guest.slots} personas.\n\n`
+      ? `Asistiremos *${count}* de las ${guest.slots} personas invitadas.\n\n`
       : `Asistiremos *${guest.slots}* personas.\n\n`
 
   return (
     `¡Hola Agos!\n\n` +
-    `Somos ${article} *${guest.name}* y con muchísima alegría confirmamos nuestra asistencia a tu fiesta de XV Años.\n` +
+    `Somos ${article} *${guest.name}* y con muchísima alegría confirmamos nuestra asistencia a tu fiesta de XV años.\n` +
     countLine +
     `${closing}`
   )

@@ -24,25 +24,25 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xn--15aosmelany-3db.site"),
-  title: "Mis XV Años — Agos",
+  title: "Mis XV años — Agos",
   description:
-    "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Sabado 26 de Septiembre, Discoteca 8cero4.",
+    "Te invito a celebrar conmigo una noche inolvidable. Mis XV años — sábado 26 de septiembre, Discoteca 8cero4.",
   openGraph: {
-    title: "Mis XV Años — Agos",
+    title: "Mis XV años — Agos",
     description:
-      "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Sabado 26 de Septiembre, Discoteca 8cero4.",
+      "Te invito a celebrar conmigo una noche inolvidable. Mis XV años — sábado 26 de septiembre, Discoteca 8cero4.",
     images: [
       {
         url: "/og-preview.jpg",
-        alt: "Invitación de XV Años de Agos",
+        alt: "Invitación de XV años de Agos",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mis XV Años — Agos",
+    title: "Mis XV años — Agos",
     description:
-      "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Sabado 26 de Septiembre, Discoteca 8cero4.",
+      "Te invito a celebrar conmigo una noche inolvidable. Mis XV años — sábado 26 de septiembre, Discoteca 8cero4.",
     images: ["/og-preview.jpg"],
   },
 }

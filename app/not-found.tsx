@@ -49,7 +49,7 @@ export default function NotFound() {
 
       <div className="relative mx-auto flex max-w-lg flex-col items-center px-6 text-center animate-in fade-in zoom-in duration-1000">
         <p className="font-display text-xs sm:text-sm tracking-[0.5em] uppercase text-primary/80">
-          Oops...
+          Ups...
         </p>
 
         <div className="mt-4 mb-4">
@@ -67,7 +67,7 @@ export default function NotFound() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="h-6 w-6 animate-spin rounded-full border-2 border-primary border-t-transparent" />
           <p className="font-serif italic text-sm text-foreground/80">
-            Acomodándote de vuelta al inicio...
+            Llevándote de vuelta al inicio...
           </p>
         </div>
       </div>

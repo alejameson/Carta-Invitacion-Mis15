@@ -176,7 +176,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
           >
             <div className="h-px w-20 bg-white/30 mb-2" />
             <p className="font-display text-[0.55rem] tracking-[0.5em] uppercase text-white/60 sm:text-[0.65rem]">
-              XV Años · Septiembre 2026
+              XV años · Septiembre de 2026
             </p>
           </div>
         </div>

@@ -94,7 +94,7 @@ export function WhatsappConfirm({ phone, hostName, guest }: Props) {
               </div>
 
               <p className="text-sm uppercase tracking-[0.15em] text-foreground font-bold">
-                Cupo Personal Reservado
+                Cupo personal reservado
               </p>
               <p className="text-[11px] uppercase tracking-[0.1em] text-muted-foreground/80 font-semibold">
                 (Pase individual, sin acompañantes)
@@ -156,8 +156,8 @@ export function WhatsappConfirm({ phone, hostName, guest }: Props) {
 // ── Generic message (no guest identified) ─────────────────────────────
 function buildGenericMessage(guestName: string, hostName: string): string {
   return [
-    `Hola ${hostName}! Soy ${guestName}.`,
-    `Con muchísima alegría confirmo mi asistencia a tu fiesta de XV Años.`,
+    `¡Hola, ${hostName}! Soy ${guestName}.`,
+    `Con muchísima alegría confirmo mi asistencia a tu fiesta de XV años.`,
     `Gracias por incluirme en una noche tan especial. ¡No me la pierdo por nada del mundo!`,
   ].join(" ")
 }
@@ -171,7 +171,7 @@ function buildPersonalizedMessage(guest: GuestInfo, count?: number): string {
     return [
       `¡Hola Agos!`,
       "",
-      `Soy *${guest.name}* y con muchísima alegría confirmo mi asistencia a tu fiesta de XV Años.`,
+      `Soy *${guest.name}* y con muchísima alegría confirmo mi asistencia a tu fiesta de XV años.`,
       "",
       `¡Cuenta conmigo, no me ${pronoun} pierdo por nada del mundo!`,
     ].join("\n")
@@ -186,13 +186,13 @@ function buildPersonalizedMessage(guest: GuestInfo, count?: number): string {
 
   const countLine =
     count != null
-      ? `Asistiremos *${count}* de ${guest.slots} personas.`
+      ? `Asistiremos *${count}* de las ${guest.slots} personas invitadas.`
       : `Asistiremos *${guest.slots}* personas.`
 
   return [
     `¡Hola Agos!`,
     "",
-    `Somos ${article} *${guest.name}* y con muchísima alegría confirmamos nuestra asistencia a tu fiesta de XV Años.`,
+    `Somos ${article} *${guest.name}* y con muchísima alegría confirmamos nuestra asistencia a tu fiesta de XV años.`,
     countLine,
     "",
     closing,

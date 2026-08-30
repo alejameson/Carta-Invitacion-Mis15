@@ -16,8 +16,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const guest = findGuest(slug)
   if (!guest) return { title: "Invitación no encontrada" }
 
-  const title = `Invitación para ${guest.name} — Mis XV Años de Agos`
-  const description = `${guest.name}, estás invitad${guest.type === "f" ? "a" : "o"} a celebrar los XV Años de Agos. Sabado 26 de Septiembre, Discoteca 8cero4.`
+  const title = `Invitación para ${guest.name} — Mis XV años de Agos`
+  const invitationPhrase =
+    guest.type === "f"
+      ? "estás invitada"
+      : guest.type === "m"
+        ? "estás invitado"
+        : guest.type === "sisters"
+          ? "están invitadas"
+          : "están invitados"
+  const description = `${guest.name}, ${invitationPhrase} a celebrar los XV años de Agos. Sábado 26 de septiembre, Discoteca 8cero4.`
 
   return {
     title,
@@ -28,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [
         {
           url: "/og-preview.jpg",
-          alt: `Invitación de XV Años para ${guest.name}`,
+          alt: `Invitación de XV años para ${guest.name}`,
         },
       ],
     },

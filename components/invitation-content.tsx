@@ -14,7 +14,7 @@ import type { Guest } from "@/lib/guests"
 import { getGuestStrings } from "@/lib/guests"
 
 const HOST_NAME = "Agos"
-const EVENT_DATE_ISO = "2026-09-26T21:30:00-03:00" // Sábado 26 Septiembre 2026, 9:30 PM (Argentina)
+const EVENT_DATE_ISO = "2026-09-26T21:30:00-03:00" // Sábado 26 de septiembre de 2026, 9:30 p. m. (Argentina)
 const EVENT_LOCATION = "Lavalle Juan (S) 816"
 const PARTY_ADDRESS = `${EVENT_LOCATION}, J5402 San Juan, San Juan, Argentina`
 const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(PARTY_ADDRESS)}&output=embed`
@@ -67,7 +67,7 @@ export function InvitationContent({ guest }: Props) {
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-36 pb-20 text-center sm:pt-40">
           <p className="font-display text-xs sm:text-sm tracking-[0.5em] uppercase text-primary-text">
-            Mis Quince Años
+            Mis quince años
           </p>
 
           <div className="mt-6 mb-4">
@@ -104,7 +104,7 @@ export function InvitationContent({ guest }: Props) {
           </div>
 
           <p className="mt-10 font-display text-2xl sm:text-3xl text-foreground tracking-wide">
-            Sabado <span className="text-primary-text">·</span> 26 de Septiembre
+            Sábado <span className="text-primary-text">·</span> 26 de septiembre
           </p>
         </div>
       </section>
@@ -131,7 +131,7 @@ export function InvitationContent({ guest }: Props) {
             <LilacCorner position="br" className="h-20 w-20 opacity-90" />
 
             <p className="text-center text-xs uppercase tracking-[0.4em] text-primary-text">
-              Carta de Invitación
+              Carta de invitación
             </p>
 
             <h2 className="mt-4 text-center font-display text-3xl sm:text-4xl text-foreground text-balance">
@@ -155,8 +155,8 @@ export function InvitationContent({ guest }: Props) {
 
               <p className="first-letter:font-display first-letter:text-5xl first-letter:text-primary-text first-letter:float-left first-letter:mr-2 first-letter:leading-none">
                 {strings?.isPlural
-                  ? "Hoy quiero invitarlos a uno de los días más especiales de mi vida: la celebración de mis Quince Años, ese momento en el que dejo atrás la niñez para abrirle la puerta a una nueva etapa llena de sueños, ilusiones y promesas."
-                  : "Hoy quiero invitarte a uno de los días más especiales de mi vida: la celebración de mis Quince Años, ese momento en el que dejo atrás la niñez para abrirle la puerta a una nueva etapa llena de sueños, ilusiones y promesas."
+                  ? "Hoy quiero invitarlos a uno de los días más especiales de mi vida: la celebración de mis quince años, ese momento en el que dejo atrás la niñez para abrirle la puerta a una nueva etapa llena de sueños, ilusiones y promesas."
+                  : "Hoy quiero invitarte a uno de los días más especiales de mi vida: la celebración de mis quince años, ese momento en el que dejo atrás la niñez para abrirle la puerta a una nueva etapa llena de sueños, ilusiones y promesas."
                 }
               </p>
 
@@ -169,7 +169,7 @@ export function InvitationContent({ guest }: Props) {
 
               <p>
                 {strings?.isPlural
-                  ? "Los espero con el corazón lleno de alegría, lista para bailar, reír y escribir juntos un capítulo que recordaremos para siempre."
+                  ? "Los espero con el corazón lleno de alegría, lista para bailar, reír y compartir un capítulo que recordaremos para siempre."
                   : "Te espero con el corazón lleno de alegría, lista para bailar, reír y escribir juntos un capítulo que recordaremos para siempre."
                 }
               </p>
@@ -199,7 +199,7 @@ export function InvitationContent({ guest }: Props) {
             Cuenta regresiva para mi gran noche
           </h2>
           <p className="mt-3 font-serif italic text-muted-foreground">
-            Sabado 26 de Septiembre · 9:30 PM
+            Sábado 26 de septiembre · 9:30 p. m.
           </p>
 
           <div className="mt-10">
@@ -219,7 +219,7 @@ export function InvitationContent({ guest }: Props) {
 
         <div className="relative mx-auto max-w-3xl">
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Detalles del Evento</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Detalles del evento</p>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground">¿Cuándo y dónde?</h2>
             <FloralDivider className="my-8" />
           </div>
@@ -227,8 +227,8 @@ export function InvitationContent({ guest }: Props) {
           <div className="grid gap-5 sm:grid-cols-3">
             <DetailCard
               label="Fecha"
-              title="26 de Septiembre"
-              subtitle="Sabado · 2026"
+              title="26 de septiembre"
+              subtitle="Sábado · 2026"
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-7 w-7">
                   <rect x="3" y="5" width="18" height="16" rx="2" />
@@ -239,8 +239,8 @@ export function InvitationContent({ guest }: Props) {
             />
             <DetailCard
               label="Hora"
-              title="9:30 PM"
-              subtitle="Recepción a las 9:30 PM"
+              title="9:30 p. m."
+              subtitle="Recepción a las 9:30 p. m."
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-7 w-7">
                   <circle cx="12" cy="12" r="9" />
@@ -273,7 +273,7 @@ export function InvitationContent({ guest }: Props) {
         <LilacCorner position="br" className="h-22 w-22 sm:h-28 sm:w-28 opacity-90" />
 
         <div className="relative mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Código de Vestimenta</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Código de vestimenta</p>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground">Dress Code</h2>
 
           <FloralDivider className="my-8" />
@@ -304,7 +304,7 @@ export function InvitationContent({ guest }: Props) {
             <div className="flex flex-col items-center">
               <div
                 className="flex h-16 w-16 items-center justify-center rounded-full border border-primary/30 bg-primary/5 shadow-lg shadow-primary/10 sm:h-20 sm:w-20"
-                aria-label="Vestimenta Formal"
+                aria-label="Vestimenta formal"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -346,7 +346,7 @@ export function InvitationContent({ guest }: Props) {
         <Butterfly className="pointer-events-none absolute left-[10%] top-[30%] h-8 w-10 animate-butterfly opacity-70 sm:h-10 sm:w-12" />
 
         <div className="relative mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Ubicación de la Fiesta</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Ubicación de la fiesta</p>
           <h2 className="mt-4 font-display text-3xl text-foreground sm:text-4xl">Cómo llegar</h2>
 
           <div className="relative mt-8">
@@ -398,7 +398,7 @@ export function InvitationContent({ guest }: Props) {
         <div className="relative mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Revive el Recuerdo</p>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground text-balance">
-            Álbum de mis Quince
+            Álbum de mis quince
           </h2>
 
           <FloralDivider className="my-8" />
@@ -510,7 +510,7 @@ export function InvitationContent({ guest }: Props) {
         <FloralDivider className="mb-8" />
         <p className="font-script text-5xl sm:text-6xl text-primary-text">Te espero</p>
         <p className="mt-4 font-display tracking-[0.4em] text-sm uppercase text-muted-foreground">
-          {HOST_NAME} · XV Años
+          {HOST_NAME} · XV años
         </p>
         <p className="mt-2 font-serif italic text-sm text-muted-foreground/80">26 · 09 · 2026</p>
       </footer>
