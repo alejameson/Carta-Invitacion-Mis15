@@ -134,7 +134,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
                     <p className="font-display text-[0.48rem] tracking-[0.5em] uppercase text-primary/75 sm:text-[0.58rem]">
                       {inviteLabel || "Estás invitada a"}
                     </p>
-                    <p className="mt-1.5 font-script text-[2.2rem] leading-none text-primary sm:text-[2.7rem]">
+                    <p className="mt-1.5 font-script text-[2.2rem] leading-none text-primary-text sm:text-[2.7rem]">
                       Mis XV
                     </p>
                     <div className="mx-auto my-2 h-px w-10 bg-primary/35" />
@@ -152,7 +152,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
                   <div className="envelope-flap-bg" style={{ opacity: flapBehind ? 0 : 1 }} />
                   <div className="envelope-flap-inner" style={{ opacity: flapBehind ? 1 : 0 }} />
                   <div className={`wax-seal transition-opacity duration-300 ${flapBehind ? "opacity-0" : "opacity-100"}`}>
-                    <span className="wax-seal-letter">M</span>
+                    <span className="wax-seal-letter">A</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
           >
             <div className="h-px w-20 bg-white/30 mb-2" />
             <p className="font-display text-[0.55rem] tracking-[0.5em] uppercase text-white/60 sm:text-[0.65rem]">
-              XV Años · Junio 2026
+              XV Años · Septiembre 2026
             </p>
           </div>
         </div>

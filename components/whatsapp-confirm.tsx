@@ -35,7 +35,7 @@ export function WhatsappConfirm({ phone, hostName, guest }: Props) {
         <>
           {/* Show guest name as a badge */}
           <div className="text-center">
-            <p className="font-script text-3xl sm:text-4xl text-primary leading-tight">
+            <p className="font-script text-3xl sm:text-4xl text-primary-text leading-tight">
               {guest.name}
             </p>
           </div>
@@ -88,7 +88,7 @@ export function WhatsappConfirm({ phone, hostName, guest }: Props) {
               </p>
               
               <div className="flex items-center justify-center">
-                <span className="font-display text-4xl text-primary font-bold">
+                <span className="font-display text-4xl text-primary-text font-bold">
                   1
                 </span>
               </div>

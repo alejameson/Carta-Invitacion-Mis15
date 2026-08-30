@@ -44,7 +44,7 @@ export function Countdown({ targetDate }: { targetDate: string }) {
           className="flex flex-col items-center justify-center rounded-lg border border-primary/30 bg-card/70 backdrop-blur-sm py-3 sm:py-5 shadow-sm"
         >
           <span
-            className="font-display text-2xl sm:text-4xl text-primary tabular-nums"
+            className="font-display text-2xl sm:text-4xl text-primary-text tabular-nums"
             suppressHydrationWarning
           >
             {String(item.value).padStart(2, "0")}

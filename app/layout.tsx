@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://xn--15aosmelany-3db.site"),
   title: "Mis XV Años — Agos",
   description:
-    "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Domingo 14 de Junio, Discoteca 8cero4.",
+    "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Sabado 26 de Septiembre, Discoteca 8cero4.",
   openGraph: {
     title: "Mis XV Años — Agos",
     description:
-      "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Domingo 14 de Junio, Discoteca 8cero4.",
+      "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Sabado 26 de Septiembre, Discoteca 8cero4.",
     images: [
       {
         url: "/og-preview.jpg",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mis XV Años — Agos",
     description:
-      "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Domingo 14 de Junio, Discoteca 8cero4.",
+      "Te invito a celebrar conmigo una noche inolvidable. Mis XV Años — Sabado 26 de Septiembre, Discoteca 8cero4.",
     images: ["/og-preview.jpg"],
   },
 }

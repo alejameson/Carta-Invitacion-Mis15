@@ -15,6 +15,7 @@
   --popover-foreground: #5f3038;
 
   --primary: #ffb6c1;                             /* rosado principal */
+  --primary-text: #a23f55;                        /* rosado oscuro para texto legible */
   --primary-foreground: oklch(0.99 0.005 320);
 
   --secondary: #ffe3e7;                           /* rosado pastel */
@@ -44,6 +45,7 @@
   --popover: #342025;
   --popover-foreground: #fff0f2;
   --primary: #ffb6c1;
+  --primary-text: #ffcad2;
   --primary-foreground: #29191c;
   --secondary: #4b2c33;
   --secondary-foreground: #fff0f2;
@@ -71,6 +73,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);

@@ -14,14 +14,16 @@ import type { Guest } from "@/lib/guests"
 import { getGuestStrings } from "@/lib/guests"
 
 const HOST_NAME = "Agos"
-const EVENT_DATE_ISO = "2026-06-14T20:00:00-05:00" // Domingo 14 Junio 2026, 8:00 PM (Colombia)
-const EVENT_LOCATION = "Discoteca 8cero4, en cuatro esquinas"
-const WHATSAPP_PHONE = "573015181018" // +57 301 518 1018
-const MAIN_PHOTO_SRC = "/hero-optimized.webp"
+const EVENT_DATE_ISO = "2026-09-26T21:30:00-03:00" // Sábado 26 Septiembre 2026, 9:30 PM (Argentina)
+const EVENT_LOCATION = "Lavalle Juan (S) 816"
+const PARTY_ADDRESS = `${EVENT_LOCATION}, J5402 San Juan, San Juan, Argentina`
+const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(PARTY_ADDRESS)}&output=embed`
+const MAP_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(PARTY_ADDRESS)}`
+const WHATSAPP_PHONE = "542645143219" // +54 264 514 3219
+const MAIN_PHOTO_SRC = "/og-preview - copia.jpeg"
 
-// URL de la carpeta donde los invitados subirán las fotos.
-// Reemplázala por tu enlace real (Google Drive, Google Photos, Dropbox, etc.)
-const PHOTO_FOLDER_URL = "https://photos.app.goo.gl/WNkq2bs2K4JbYF4o6"
+// Álbum de fotos administrado únicamente por su dueña.
+const PHOTO_FOLDER_URL = "https://photos.app.goo.gl/35W7sGgm4uPtUvqu5"
 const PHOTO_QR_SRC = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&color=8F3F52&bgcolor=FFF9FA&data=${encodeURIComponent(
   PHOTO_FOLDER_URL,
 )}`
@@ -64,12 +66,12 @@ export function InvitationContent({ guest }: Props) {
         <Butterfly className="pointer-events-none absolute right-[14%] top-[55%] h-7 w-9 animate-butterfly opacity-70 sm:h-9 sm:w-11" style={{ animationDelay: "1.5s" }} />
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-36 pb-20 text-center sm:pt-40">
-          <p className="font-display text-xs sm:text-sm tracking-[0.5em] uppercase text-primary/80">
+          <p className="font-display text-xs sm:text-sm tracking-[0.5em] uppercase text-primary-text">
             Mis Quince Años
           </p>
 
           <div className="mt-6 mb-4">
-            <span className="font-script text-7xl sm:text-9xl text-primary leading-none">
+            <span className="font-script text-7xl sm:text-9xl text-primary-text leading-none">
               {HOST_NAME}
             </span>
           </div>
@@ -102,7 +104,7 @@ export function InvitationContent({ guest }: Props) {
           </div>
 
           <p className="mt-10 font-display text-2xl sm:text-3xl text-foreground tracking-wide">
-            Domingo <span className="text-primary">·</span> 14 de Junio
+            Sabado <span className="text-primary-text">·</span> 26 de Septiembre
           </p>
         </div>
       </section>
@@ -128,15 +130,15 @@ export function InvitationContent({ guest }: Props) {
             <LilacCorner position="bl" className="h-20 w-20 opacity-90" />
             <LilacCorner position="br" className="h-20 w-20 opacity-90" />
 
-            <p className="text-center text-xs uppercase tracking-[0.4em] text-primary/80">
+            <p className="text-center text-xs uppercase tracking-[0.4em] text-primary-text">
               Carta de Invitación
             </p>
 
             <h2 className="mt-4 text-center font-display text-3xl sm:text-4xl text-foreground text-balance">
               {guest
                 ? strings?.isPlural
-                  ? <>Para ustedes, <span className="text-primary">{guest.name}</span>, que son parte de mi historia</>
-                  : <>Para ti, <span className="text-primary">{guest.name}</span>, que eres parte de mi historia</>
+                  ? <>Para ustedes, <span className="text-primary-text">{guest.name}</span>, que son parte de mi historia</>
+                  : <>Para ti, <span className="text-primary-text">{guest.name}</span>, que eres parte de mi historia</>
                 : "Para ti, que eres parte de mi historia"
               }
             </h2>
@@ -146,12 +148,12 @@ export function InvitationContent({ guest }: Props) {
             <div className="space-y-5 font-serif text-lg leading-relaxed text-foreground/90">
               {/* Personalized greeting */}
               {strings && (
-                <p className="text-center font-script text-3xl sm:text-4xl text-primary mb-2">
+                <p className="text-center font-script text-3xl sm:text-4xl text-primary-text mb-2">
                   {strings.greeting},
                 </p>
               )}
 
-              <p className="first-letter:font-display first-letter:text-5xl first-letter:text-primary first-letter:float-left first-letter:mr-2 first-letter:leading-none">
+              <p className="first-letter:font-display first-letter:text-5xl first-letter:text-primary-text first-letter:float-left first-letter:mr-2 first-letter:leading-none">
                 {strings?.isPlural
                   ? "Hoy quiero invitarlos a uno de los días más especiales de mi vida: la celebración de mis Quince Años, ese momento en el que dejo atrás la niñez para abrirle la puerta a una nueva etapa llena de sueños, ilusiones y promesas."
                   : "Hoy quiero invitarte a uno de los días más especiales de mi vida: la celebración de mis Quince Años, ese momento en el que dejo atrás la niñez para abrirle la puerta a una nueva etapa llena de sueños, ilusiones y promesas."
@@ -173,7 +175,7 @@ export function InvitationContent({ guest }: Props) {
               </p>
 
               <p className="text-right pt-4">
-                <span className="font-script text-4xl text-primary">Con cariño, {HOST_NAME}</span>
+                <span className="font-script text-4xl text-primary-text">Con cariño, {HOST_NAME}</span>
               </p>
             </div>
           </div>
@@ -192,12 +194,12 @@ export function InvitationContent({ guest }: Props) {
         <Sparkles className="pointer-events-none absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 animate-shimmer opacity-50" />
 
         <div className="relative mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary/80">Falta poco</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Falta poco</p>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground text-balance">
             Cuenta regresiva para mi gran noche
           </h2>
           <p className="mt-3 font-serif italic text-muted-foreground">
-            Domingo 14 de Junio · 8:00 PM
+            Sabado 26 de Septiembre · 9:30 PM
           </p>
 
           <div className="mt-10">
@@ -217,7 +219,7 @@ export function InvitationContent({ guest }: Props) {
 
         <div className="relative mx-auto max-w-3xl">
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-primary/80">Detalles del Evento</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Detalles del Evento</p>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground">¿Cuándo y dónde?</h2>
             <FloralDivider className="my-8" />
           </div>
@@ -225,8 +227,8 @@ export function InvitationContent({ guest }: Props) {
           <div className="grid gap-5 sm:grid-cols-3">
             <DetailCard
               label="Fecha"
-              title="14 de Junio"
-              subtitle="Domingo · 2026"
+              title="26 de Septiembre"
+              subtitle="Sabado · 2026"
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-7 w-7">
                   <rect x="3" y="5" width="18" height="16" rx="2" />
@@ -237,8 +239,8 @@ export function InvitationContent({ guest }: Props) {
             />
             <DetailCard
               label="Hora"
-              title="8:00 PM"
-              subtitle="Recepción a las 7:30 PM"
+              title="9:30 PM"
+              subtitle="Recepción a las 9:30 PM"
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-7 w-7">
                   <circle cx="12" cy="12" r="9" />
@@ -271,7 +273,7 @@ export function InvitationContent({ guest }: Props) {
         <LilacCorner position="br" className="h-22 w-22 sm:h-28 sm:w-28 opacity-90" />
 
         <div className="relative mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary/80">Código de Vestimenta</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Código de Vestimenta</p>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground">Dress Code</h2>
 
           <FloralDivider className="my-8" />
@@ -285,7 +287,7 @@ export function InvitationContent({ guest }: Props) {
                 style={{ backgroundColor: "#FFB6C1" }}
                 aria-label="Color rosado reservado"
               />
-              <div className="mt-3 flex items-center gap-1.5 text-sm sm:text-base uppercase tracking-[0.25em] text-primary font-bold">
+              <div className="mt-3 flex items-center gap-1.5 text-sm sm:text-base uppercase tracking-[0.25em] text-primary-text font-bold">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="h-4 w-4">
                   <line x1="5" y1="5" x2="19" y2="19" />
                   <line x1="19" y1="5" x2="5" y2="19" />
@@ -315,7 +317,7 @@ export function InvitationContent({ guest }: Props) {
                   <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
                 </svg>
               </div>
-              <div className="mt-3 flex items-center justify-center text-sm sm:text-base uppercase tracking-[0.25em] text-primary font-bold">
+              <div className="mt-3 flex items-center justify-center text-sm sm:text-base uppercase tracking-[0.25em] text-primary-text font-bold">
                 <span>Formal</span>
               </div>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">Traje / Vestido</p>
@@ -323,7 +325,7 @@ export function InvitationContent({ guest }: Props) {
           </div>
 
           <p className="mx-auto mt-8 max-w-md font-serif text-lg leading-relaxed text-foreground/80 text-pretty">
-            El color <span className="font-semibold text-primary">rosado</span> está reservado únicamente para
+            El color <span className="font-semibold text-primary-text">rosado</span> está reservado únicamente para
             la quinceañera. Te pedimos con cariño elegir cualquier otro tono para acompañarme en esta noche
             especial.
           </p>
@@ -334,7 +336,7 @@ export function InvitationContent({ guest }: Props) {
         </div>
       </section>
 
-      {/* ===================== LLUVIA DE SOBRES ===================== */}
+      {/* ===================== UBICACION ===================== */}
       <section className="relative overflow-hidden px-6 py-16 sm:py-24">
         <LilacCorner position="tl" className="h-24 w-24 sm:h-32 sm:w-32 opacity-80" />
         <LilacCorner position="tr" className="h-24 w-24 sm:h-32 sm:w-32 opacity-80" />
@@ -344,39 +346,43 @@ export function InvitationContent({ guest }: Props) {
         <Butterfly className="pointer-events-none absolute left-[10%] top-[30%] h-8 w-10 animate-butterfly opacity-70 sm:h-10 sm:w-12" />
 
         <div className="relative mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary/80">Acerca del Regalo</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Ubicación de la Fiesta</p>
+          <h2 className="mt-4 font-display text-3xl text-foreground sm:text-4xl">Cómo llegar</h2>
 
-          <div className="mt-8 flex justify-center">
-            <div className="relative">
-              <div
-                className="absolute inset-0 animate-shimmer rounded-full bg-primary/20 blur-2xl"
-                aria-hidden="true"
+          <div className="relative mt-8">
+            <div className="absolute -inset-2 rounded-[1.4rem] border border-primary/25" aria-hidden="true" />
+            <div className="relative overflow-hidden rounded-2xl border border-primary/30 bg-card p-2 shadow-xl shadow-primary/15">
+              <iframe
+                src={MAP_EMBED_URL}
+                title="Mapa de la ubicación de la fiesta"
+                className="h-64 w-full rounded-xl border-0 sm:h-80"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
-              <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-primary/30 bg-card shadow-lg shadow-primary/10 animate-float-slow">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  className="h-11 w-11 text-primary"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="6" width="18" height="13" rx="1.5" />
-                  <path d="M3 7l9 7 9-7" />
-                  <path d="M12 14l-2 3M12 14l2 3" opacity="0.5" />
-                </svg>
-              </div>
             </div>
           </div>
 
-          <h2 className="mt-8 font-display text-3xl sm:text-4xl text-foreground">Lluvia de Sobres</h2>
+          <div className="mt-7 flex items-center justify-center gap-2 text-primary-text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-6 w-6" aria-hidden="true">
+              <path d="M12 22s7-7.58 7-13a7 7 0 0 0-14 0c0 5.42 7 13 7 13z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+            <p className="font-display text-xl text-foreground">{EVENT_LOCATION}</p>
+          </div>
+          <p className="mt-1 font-serif italic text-muted-foreground">J5402 San Juan, San Juan, Argentina</p>
 
-          <p className="mt-5 font-serif text-lg leading-relaxed text-foreground/80 text-pretty">
-            Si deseas regalarme algo, lo mejor es un sobre con tu cariño dentro. Será de gran ayuda para
-            seguir construyendo mis sueños, y atesoraré cada gesto con muchísimo amor.
-          </p>
-
-          <p className="mt-6 font-script text-3xl text-primary">¡Gracias de corazón!</p>
+          <a
+            href={MAP_DIRECTIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-secondary/50 px-6 py-3 font-serif text-sm text-primary-text shadow-sm transition-colors hover:bg-secondary"
+          >
+            Abrir en Google Maps
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4" aria-hidden="true">
+              <path d="M14 3h7v7M21 3l-9 9M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -390,16 +396,16 @@ export function InvitationContent({ guest }: Props) {
         <LilacCorner position="br" className="h-22 w-22 sm:h-28 sm:w-28 opacity-90" />
 
         <div className="relative mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary/80">Comparte el Recuerdo</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Revive el Recuerdo</p>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground text-balance">
-            Sube tus fotos a la carpeta
+            Álbum de mis Quince
           </h2>
 
           <FloralDivider className="my-8" />
 
           <p className="mx-auto max-w-md font-serif text-base leading-relaxed text-foreground/80 text-pretty">
-            Quiero conservar cada instante de esta noche desde tu mirada. Escanea el código QR y sube las
-            fotos y videos que tomes durante la fiesta a la carpeta compartida.
+            Escanea el código QR para abrir el álbum y revivir los momentos más especiales de esta noche.
+            Las fotografías serán agregadas y administradas únicamente por la dueña del álbum.
           </p>
 
           <div className="mt-10 flex justify-center">
@@ -409,13 +415,13 @@ export function InvitationContent({ guest }: Props) {
               <div className="relative rounded-[1rem] border border-primary/20 bg-card p-5 shadow-xl shadow-primary/15">
                 <Image
                   src={PHOTO_QR_SRC || "/placeholder.svg"}
-                  alt="Código QR para subir fotos a la carpeta compartida"
+                  alt="Código QR para abrir el álbum de fotos de los Quince"
                   width={240}
                   height={240}
                   className="h-56 w-56 sm:h-60 sm:w-60"
                   unoptimized
                 />
-                <div className="mt-3 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.3em] text-primary">
+                <div className="mt-3 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.3em] text-primary-text">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
                     <rect x="14" y="3" width="7" height="7" rx="1" />
@@ -432,9 +438,9 @@ export function InvitationContent({ guest }: Props) {
             href={PHOTO_FOLDER_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 font-serif text-sm italic text-primary underline-offset-4 hover:underline"
+            className="mt-8 inline-flex items-center gap-2 font-serif text-sm italic text-primary-text underline-offset-4 hover:underline"
           >
-            o toca aquí para abrir la carpeta directamente
+            o toca aquí para abrir el álbum directamente
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4">
               <path d="M14 3h7v7M21 3l-9 9M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
             </svg>
@@ -466,7 +472,7 @@ export function InvitationContent({ guest }: Props) {
             <LilacCorner position="bl" className="h-20 w-20 opacity-90" />
             <LilacCorner position="br" className="h-20 w-20 opacity-90" />
 
-            <p className="text-xs uppercase tracking-[0.4em] text-primary/80">Confirma tu Asistencia</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-primary-text">Confirma tu Asistencia</p>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl text-foreground text-balance">
               Hazme saber que estarás ahí
             </h2>
@@ -502,11 +508,11 @@ export function InvitationContent({ guest }: Props) {
         <LilacCorner position="br" className="h-28 w-28 opacity-80 sm:h-36 sm:w-36" />
 
         <FloralDivider className="mb-8" />
-        <p className="font-script text-5xl sm:text-6xl text-primary">Te espero</p>
+        <p className="font-script text-5xl sm:text-6xl text-primary-text">Te espero</p>
         <p className="mt-4 font-display tracking-[0.4em] text-sm uppercase text-muted-foreground">
           {HOST_NAME} · XV Años
         </p>
-        <p className="mt-2 font-serif italic text-sm text-muted-foreground/80">14 · 06 · 2026</p>
+        <p className="mt-2 font-serif italic text-sm text-muted-foreground/80">26 · 09 · 2026</p>
       </footer>
       </main>
     </IntroGate>

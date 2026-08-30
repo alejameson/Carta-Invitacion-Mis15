@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!guest) return { title: "Invitación no encontrada" }
 
   const title = `Invitación para ${guest.name} — Mis XV Años de Agos`
-  const description = `${guest.name}, estás invitad${guest.type === "f" ? "a" : "o"} a celebrar los XV Años de Agos. Domingo 14 de Junio, Discoteca 8cero4.`
+  const description = `${guest.name}, estás invitad${guest.type === "f" ? "a" : "o"} a celebrar los XV Años de Agos. Sabado 26 de Septiembre, Discoteca 8cero4.`
 
   return {
     title,
