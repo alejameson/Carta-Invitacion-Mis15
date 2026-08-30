@@ -4,58 +4,58 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Paleta Lila / XV Años — 5 colores totales */
-  --background: oklch(0.985 0.008 320);          /* crema lila muy claro */
-  --foreground: oklch(0.28 0.06 305);            /* morado profundo (texto) */
+  /* Paleta rosada / XV Años — color principal #FFB6C1 */
+  --background: #fff9fa;                          /* rosado crema muy claro */
+  --foreground: #5f3038;                          /* rosa profundo (texto) */
 
   --card: oklch(0.99 0.005 320);
-  --card-foreground: oklch(0.28 0.06 305);
+  --card-foreground: #5f3038;
 
   --popover: oklch(0.99 0.005 320);
-  --popover-foreground: oklch(0.28 0.06 305);
+  --popover-foreground: #5f3038;
 
-  --primary: oklch(0.68 0.13 310);               /* lila principal */
+  --primary: #ffb6c1;                             /* rosado principal */
   --primary-foreground: oklch(0.99 0.005 320);
 
-  --secondary: oklch(0.93 0.04 315);             /* lila pastel */
-  --secondary-foreground: oklch(0.32 0.08 305);
+  --secondary: #ffe3e7;                           /* rosado pastel */
+  --secondary-foreground: #6b3640;
 
-  --muted: oklch(0.95 0.02 320);
-  --muted-foreground: oklch(0.5 0.05 310);
+  --muted: #fff0f2;
+  --muted-foreground: #8c5a63;
 
   --accent: oklch(0.78 0.09 75);                 /* dorado suave (acento) */
-  --accent-foreground: oklch(0.25 0.05 305);
+  --accent-foreground: #553038;
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
 
-  --border: oklch(0.86 0.04 315);
-  --input: oklch(0.9 0.03 315);
-  --ring: oklch(0.68 0.13 310);
+  --border: #f2cbd1;
+  --input: #f7d9de;
+  --ring: #ffb6c1;
 
   --radius: 0.625rem;
 }
 
 .dark {
-  --background: oklch(0.18 0.04 305);
-  --foreground: oklch(0.96 0.02 320);
-  --card: oklch(0.22 0.05 305);
-  --card-foreground: oklch(0.96 0.02 320);
-  --popover: oklch(0.22 0.05 305);
-  --popover-foreground: oklch(0.96 0.02 320);
-  --primary: oklch(0.78 0.13 310);
-  --primary-foreground: oklch(0.18 0.04 305);
-  --secondary: oklch(0.3 0.06 305);
-  --secondary-foreground: oklch(0.96 0.02 320);
-  --muted: oklch(0.28 0.05 305);
-  --muted-foreground: oklch(0.75 0.05 310);
+  --background: #29191c;
+  --foreground: #fff0f2;
+  --card: #342025;
+  --card-foreground: #fff0f2;
+  --popover: #342025;
+  --popover-foreground: #fff0f2;
+  --primary: #ffb6c1;
+  --primary-foreground: #29191c;
+  --secondary: #4b2c33;
+  --secondary-foreground: #fff0f2;
+  --muted: #432a30;
+  --muted-foreground: #ddaab2;
   --accent: oklch(0.78 0.09 75);
-  --accent-foreground: oklch(0.18 0.04 305);
+  --accent-foreground: #29191c;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.32 0.06 305);
-  --input: oklch(0.32 0.06 305);
-  --ring: oklch(0.78 0.13 310);
+  --border: #56343c;
+  --input: #56343c;
+  --ring: #ffb6c1;
 }
 
 @theme inline {
@@ -215,8 +215,8 @@
    * which flatten the 3D stacking context and break child rotateX.
    */
   box-shadow:
-    0 30px 55px rgba(50, 10, 80, 0.58),
-    0 10px 20px rgba(50, 10, 80, 0.28);
+    0 30px 55px rgba(95, 48, 56, 0.58),
+    0 10px 20px rgba(95, 48, 56, 0.28);
   animation: envelope-appear 1s cubic-bezier(0.22, 0.9, 0.28, 1) both;
 }
 .envelope-idle {
@@ -231,9 +231,9 @@
   inset: 0;
   background: linear-gradient(
     160deg,
-    oklch(0.52 0.15 307) 0%,
-    oklch(0.43 0.14 303) 55%,
-    oklch(0.38 0.13 300) 100%
+    #df8996 0%,
+    #c96f7d 55%,
+    #ad5967 100%
   );
   border-radius: 10px;
   box-shadow:
@@ -251,9 +251,9 @@
   bottom: 8%;
   background:
     linear-gradient(160deg,
-      oklch(0.998 0.002 325) 0%,
-      oklch(0.975 0.008 322) 50%,
-      oklch(0.960 0.014 318) 100%);
+      #fffefe 0%,
+      #fff7f8 50%,
+      #ffeff2 100%);
   border-radius: 5px;
   padding: 14px 16px;
   display: flex;
@@ -261,7 +261,7 @@
   justify-content: center;
   box-shadow:
     0 10px 22px rgba(0, 0, 0, 0.25),
-    inset 0 0 0 1px rgba(120, 60, 160, 0.12),
+    inset 0 0 0 1px rgba(190, 91, 108, 0.12),
     inset 0 1px 0 rgba(255,255,255,0.9);
   z-index: 2;
   transform: translateY(0) scale(1);
@@ -282,8 +282,8 @@
   inset: 0;
   background: linear-gradient(
     175deg,
-    oklch(0.72 0.13 311) 0%,
-    oklch(0.60 0.15 308) 100%
+    #ffb6c1 0%,
+    #dc8391 100%
   );
   clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
   border-radius: 0 0 10px 10px;
@@ -324,8 +324,8 @@
   inset: 0;
   background: linear-gradient(
     175deg,
-    oklch(0.78 0.12 312) 0%,
-    oklch(0.63 0.15 308) 100%
+    #ffc4cd 0%,
+    #e38e9b 100%
   );
   clip-path: polygon(0 0, 100% 0, 50% 96%);
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.30));
@@ -336,11 +336,11 @@
   inset: 0;
   background: linear-gradient(
     175deg,
-    oklch(0.94 0.03 318) 0%,
-    oklch(0.87 0.06 314) 100%
+    #ffe8eb 0%,
+    #ffcbd3 100%
   );
   clip-path: polygon(0 0, 100% 0, 50% 96%);
-  box-shadow: inset 0 -10px 20px rgba(120,60,160,0.15);
+  box-shadow: inset 0 -10px 20px rgba(190,91,108,0.15);
   transition: opacity 0ms;
 }
 

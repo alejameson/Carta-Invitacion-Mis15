@@ -6,7 +6,7 @@ type CornerProps = {
 }
 
 /**
- * Esquina floral: racimo denso de flores lilas y hojas para anclar a las
+ * Esquina floral: racimo denso de flores rosadas y hojas para anclar a las
  * esquinas de cada sección. Se posiciona en (0,0) de la esquina indicada y
  * se voltea automáticamente para que el ramo "crezca" hacia adentro.
  */
@@ -89,7 +89,7 @@ type BranchProps = {
   flipped?: boolean
 }
 
-/** Rama horizontal de lilas para márgenes laterales (full height de sección) */
+/** Rama horizontal de flores rosadas para márgenes laterales (full height de sección) */
 export function LilacBranch({ className = "", flipped = false }: BranchProps) {
   return (
     <svg
@@ -139,7 +139,7 @@ export function FallingPetals({ className = "", count = 8 }: { className?: strin
     const delay = (i * 0.7) % 6
     const duration = 9 + ((i * 1.3) % 6)
     const size = 10 + ((i * 5) % 10)
-    const tones = ["oklch(0.78 0.10 305)", "oklch(0.68 0.13 305)", "oklch(0.85 0.07 305)"]
+    const tones = ["#FFB6C1", "#e58f9c", "#ffd6dc"]
     const fill = tones[i % tones.length]
     return { left, delay, duration, size, fill, key: i }
   })
@@ -185,25 +185,25 @@ export function Butterfly({ className = "", style }: { className?: string; style
         {/* Ala superior izquierda */}
         <path
           d="M30 25 Q 10 5 5 18 Q 0 30 18 30 Q 26 30 30 25 Z"
-          fill="oklch(0.72 0.13 305)"
+          fill="#FFB6C1"
           opacity="0.85"
         />
         {/* Ala inferior izquierda */}
         <path
           d="M30 25 Q 12 38 8 45 Q 22 48 30 30 Z"
-          fill="oklch(0.62 0.15 305)"
+          fill="#e58f9c"
           opacity="0.85"
         />
         {/* Ala superior derecha */}
         <path
           d="M30 25 Q 50 5 55 18 Q 60 30 42 30 Q 34 30 30 25 Z"
-          fill="oklch(0.72 0.13 305)"
+          fill="#FFB6C1"
           opacity="0.85"
         />
         {/* Ala inferior derecha */}
         <path
           d="M30 25 Q 48 38 52 45 Q 38 48 30 30 Z"
-          fill="oklch(0.62 0.15 305)"
+          fill="#e58f9c"
           opacity="0.85"
         />
         {/* Detalles en alas */}
@@ -212,18 +212,18 @@ export function Butterfly({ className = "", style }: { className?: string; style
         <circle cx="18" cy="38" r="1.4" fill="oklch(0.92 0.04 95)" opacity="0.9" />
         <circle cx="42" cy="38" r="1.4" fill="oklch(0.92 0.04 95)" opacity="0.9" />
         {/* Cuerpo */}
-        <ellipse cx="30" cy="27" rx="1.6" ry="11" fill="oklch(0.30 0.05 305)" />
+        <ellipse cx="30" cy="27" rx="1.6" ry="11" fill="#743f49" />
         {/* Antenas */}
         <path
           d="M30 18 Q 27 10 23 8"
-          stroke="oklch(0.30 0.05 305)"
+          stroke="#743f49"
           strokeWidth="0.8"
           fill="none"
           strokeLinecap="round"
         />
         <path
           d="M30 18 Q 33 10 37 8"
-          stroke="oklch(0.30 0.05 305)"
+          stroke="#743f49"
           strokeWidth="0.8"
           fill="none"
           strokeLinecap="round"
@@ -304,9 +304,9 @@ function Cluster({ cx, cy, scale = 1 }: { cx: number; cy: number; scale?: number
   ]
 
   const tones = [
-    "oklch(0.78 0.10 305)",
-    "oklch(0.68 0.13 305)",
-    "oklch(0.58 0.15 305)",
+    "#FFB6C1",
+    "#e58f9c",
+    "#c96f7d",
   ]
 
   return (

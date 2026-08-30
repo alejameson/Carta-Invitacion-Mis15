@@ -4,7 +4,7 @@ type Props = {
 }
 
 /**
- * Ramo decorativo de lilas estilizadas.
+ * Ramo decorativo de flores rosadas estilizadas.
  * Diseñado para flotar a los lados del contenido.
  */
 export function LilacSprig({ className = "", flipped = false }: Props) {
@@ -35,7 +35,7 @@ export function LilacSprig({ className = "", flipped = false }: Props) {
       <Leaf cx={92} cy={110} rotate={45} scale={1} />
       <Leaf cx={70} cy={55} rotate={-15} scale={0.9} />
 
-      {/* Racimos de flores lilas */}
+      {/* Racimos de flores rosadas */}
       <Cluster cx={45} cy={400} scale={1.1} />
       <Cluster cx={105} cy={335} scale={1} />
       <Cluster cx={40} cy={270} scale={1.15} />
@@ -87,9 +87,9 @@ function Cluster({ cx, cy, scale = 1 }: { cx: number; cy: number; scale?: number
   ]
 
   const tones = [
-    "oklch(0.78 0.10 305)", // lila pastel
-    "oklch(0.68 0.13 305)", // lila medio
-    "oklch(0.58 0.15 305)", // lila profundo
+    "#FFB6C1", // rosado pastel
+    "#e58f9c", // rosado medio
+    "#c96f7d", // rosado profundo
   ]
 
   return (

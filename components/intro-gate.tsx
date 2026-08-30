@@ -74,7 +74,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
           }`}
           style={{
             background:
-              "radial-gradient(ellipse 120% 90% at 50% 20%, oklch(0.95 0.04 315) 0%, oklch(0.84 0.09 312) 38%, oklch(0.60 0.15 307) 75%, oklch(0.40 0.16 303) 100%)",
+              "radial-gradient(ellipse 120% 90% at 50% 20%, #ffe8eb 0%, #ffb6c1 38%, #dc8391 75%, #9f4f5c 100%)",
           }}
         >
           {/* Ambient petals */}
@@ -108,7 +108,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
             </p>
 
             {/* Name in script */}
-            <p className={`font-script leading-none text-white drop-shadow-[0_6px_16px_rgba(40,10,70,0.55)] transition-all duration-700 ${isLetterUp ? "mb-0 text-4xl sm:text-5xl opacity-0 -translate-y-4" : "mb-8 text-5xl sm:text-6xl opacity-100 translate-y-0"}`}>
+            <p className={`font-script leading-none text-white drop-shadow-[0_6px_16px_rgba(95,48,56,0.55)] transition-all duration-700 ${isLetterUp ? "mb-0 text-4xl sm:text-5xl opacity-0 -translate-y-4" : "mb-8 text-5xl sm:text-6xl opacity-100 translate-y-0"}`}>
               Agos
             </p>
 

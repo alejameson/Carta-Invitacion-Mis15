@@ -22,7 +22,7 @@ const MAIN_PHOTO_SRC = "/hero-optimized.webp"
 // URL de la carpeta donde los invitados subirán las fotos.
 // Reemplázala por tu enlace real (Google Drive, Google Photos, Dropbox, etc.)
 const PHOTO_FOLDER_URL = "https://photos.app.goo.gl/WNkq2bs2K4JbYF4o6"
-const PHOTO_QR_SRC = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&color=4A2A6B&bgcolor=FBF7FB&data=${encodeURIComponent(
+const PHOTO_QR_SRC = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&color=8F3F52&bgcolor=FFF9FA&data=${encodeURIComponent(
   PHOTO_FOLDER_URL,
 )}`
 
@@ -88,7 +88,7 @@ export function InvitationContent({ guest }: Props) {
             <div className="relative aspect-[3/4] overflow-hidden rounded-[1.4rem] shadow-xl shadow-primary/20">
               <Image
                 src={MAIN_PHOTO_SRC}
-                alt="Vestido de XV años color lila"
+                alt="Vestido de XV años color rosado"
                 fill
                 priority
                 sizes="(max-width: 640px) 90vw, 380px"
@@ -278,19 +278,19 @@ export function InvitationContent({ guest }: Props) {
 
           {/* Muestras de color y tipo de vestimenta */}
           <div className="flex items-center justify-center gap-8 sm:gap-12">
-            {/* Izquierda: Lila Reservado */}
+            {/* Izquierda: Rosado reservado */}
             <div className="flex flex-col items-center">
               <div
                 className="h-16 w-16 rounded-full border border-primary/40 shadow-lg shadow-primary/20 sm:h-20 sm:w-20"
-                style={{ backgroundColor: "oklch(0.72 0.13 305)" }}
-                aria-label="Color lila reservado"
+                style={{ backgroundColor: "#FFB6C1" }}
+                aria-label="Color rosado reservado"
               />
               <div className="mt-3 flex items-center gap-1.5 text-sm sm:text-base uppercase tracking-[0.25em] text-primary font-bold">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="h-4 w-4">
                   <line x1="5" y1="5" x2="19" y2="19" />
                   <line x1="19" y1="5" x2="5" y2="19" />
                 </svg>
-                <span>Lila</span>
+                <span>Rosado</span>
               </div>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-destructive font-bold">Reservado</p>
             </div>
@@ -323,7 +323,7 @@ export function InvitationContent({ guest }: Props) {
           </div>
 
           <p className="mx-auto mt-8 max-w-md font-serif text-lg leading-relaxed text-foreground/80 text-pretty">
-            El color <span className="font-semibold text-primary">lila</span> está reservado únicamente para
+            El color <span className="font-semibold text-primary">rosado</span> está reservado únicamente para
             la quinceañera. Te pedimos con cariño elegir cualquier otro tono para acompañarme en esta noche
             especial.
           </p>
