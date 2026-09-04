@@ -139,7 +139,7 @@ export function IntroGate({ children, guestName, introVerb, inviteLabel }: Intro
                     </p>
                     <div className="mx-auto my-2 h-px w-10 bg-primary/35" />
                     <p className="font-display text-[0.48rem] tracking-[0.35em] uppercase text-foreground/65 sm:text-[0.58rem]">
-                      14 · Junio · 2026
+                      26 · Septiembre · 2026
                     </p>
                   </div>
                 </div>
